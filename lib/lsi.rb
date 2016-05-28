@@ -47,10 +47,11 @@ class MeRecuerda
     end
   end
 
+  # Relaciona una conversacion a un link
   # Si el mensaje enviado es >= en largo a MSG_MIN_LEN busco un link relacionado
   # y lo envio, siempre y tenga al menos un 75% de acierto.
   def relacionar_link(m)
-    if m.message.length >= MSG_MIN_LEN
+    if m.message.split(' ').length >= MSG_MIN_LEN
 
       if !@@web.empty? && @@web.length % THRESHOLD
         search = RSemantic::Search.new(@@webs.keys, verbose: false)
