@@ -12,6 +12,6 @@ class Adhocracia
   match /ha(y|bria|bría) que/, use_prefix: false, method: :adhocracia
 
   def adhocracia(m)
-    m.reply 'che qué buena idea, por qué no la hacés?', true
+    m.reply '¡Che, qué buena idea! ¿Por qué no la hacés?', true
   end
 end
